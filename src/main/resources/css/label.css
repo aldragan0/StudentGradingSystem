@@ -1,0 +1,23 @@
+.label{
+	-fx-font-family: System;
+	-fx-font-weight: bold;
+	-fx-font-size: 16px;
+	-fx-padding: 0 0 0 8;
+	-fx-text-fill: #E5F0F7;
+}
+
+#bigLabel{
+	-fx-font-family: System;
+	-fx-font-weight: bold;
+	-fx-font-size: 18px;
+	-fx-padding: 0 0 0 8;
+	-fx-text-fill: #E5F0F7;
+}
+
+#extraBigLabel{
+	-fx-font-family: System;
+	-fx-font-weight: bold;
+	-fx-font-size: 24px;
+	-fx-padding: 0 0 0 8;
+	-fx-text-fill: #E5F0F7;
+}

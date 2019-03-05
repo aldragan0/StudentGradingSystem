@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GradeAddController">
+   <children>
+      <ImageView fitHeight="417.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/backgroundPhoto3.png" />
+         </image>
+      </ImageView>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="452.0">
+         <children>
+            <TableView fx:id="gradeTableView" layoutX="38.0" layoutY="40.0" maxHeight="-Infinity" maxWidth="404.0" minHeight="-Infinity" minWidth="390.0" prefHeight="348.0" prefWidth="404.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0">
+              <columns>
+                <TableColumn fx:id="studentTableColumn" maxWidth="124.0" minWidth="97.0" prefWidth="105.0" resizable="false" text="STUDENT" />
+                  <TableColumn fx:id="groupTableColumn" maxWidth="132.0" minWidth="76.0" prefWidth="94.0" resizable="false" text="GROUP" />
+                  <TableColumn fx:id="assignmentIdTableColumn" maxWidth="166.0" minWidth="72.0" prefWidth="102.0" resizable="false" text="ASSIGNMENT" />
+                  <TableColumn fx:id="gradeTableColumn" maxWidth="106.0" minWidth="77.0" prefWidth="84.0" resizable="false" text="GRADE" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+    <AnchorPane layoutX="480.0" layoutY="41.0" minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="280.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="348.0" layoutX="-5.0" opacity="0.8" strokeType="INSIDE" width="280.0" />
+            <GridPane layoutX="-5.0" layoutY="123.0" prefHeight="309.0" prefWidth="280.0" AnchorPane.bottomAnchor="21.0" AnchorPane.leftAnchor="-5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="30.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="104.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="176.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" percentHeight="12.5" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="128.0" minHeight="10.0" percentHeight="12.5" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="232.0" minHeight="10.0" percentHeight="12.5" prefHeight="99.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="232.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="232.0" minHeight="10.0" percentHeight="12.5" prefHeight="232.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="74.0" text="Student" GridPane.halignment="RIGHT" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="33.0" prefWidth="103.0" text="Assignment" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gradeEditLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="31.0" prefWidth="54.0" text="Grade" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="studentEditComboBox" prefWidth="150.0" GridPane.columnIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <ComboBox fx:id="assignmentEditComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="10.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <TextField fx:id="gradeEditTextBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextArea fx:id="feedbackEditTextArea" prefHeight="126.0" prefWidth="156.0" stylesheets="@../css/textArea.css" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                     </GridPane.margin>
+                  </TextArea>
+                  <Button fx:id="addBtn" alignment="CENTER" contentDisplay="TOP" maxHeight="20.0" maxWidth="60.0" minHeight="20.0" minWidth="60.0" mnemonicParsing="false" onAction="#handleAdd" prefHeight="20.0" prefWidth="60.0" text="Add" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="clearBtn" alignment="CENTER" maxHeight="22.0" maxWidth="96.0" minHeight="60.0" minWidth="20.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="22.0" prefWidth="96.0" text="Clear Fields" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="50.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label fx:id="feedbackEditLabel" alignment="TOP_RIGHT" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="85.0" text="Feedback" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+                  <CheckBox fx:id="allowedEditCheckBox" mnemonicParsing="false" prefHeight="36.0" prefWidth="80.0" text="JUSTIFIED&#10;   DELAY" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.rowIndex="3" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                     <GridPane.margin>
+                        <Insets top="45.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+               </children>
+               <stylesheets>
+                  <URL value="@../css/button.css" />
+                  <URL value="@../css/label.css" />
+                  <URL value="@../css/comboBox.css" />
+                  <URL value="@../css/textField.css" />
+                  <URL value="@../css/checkBox.css" />
+               </stylesheets>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

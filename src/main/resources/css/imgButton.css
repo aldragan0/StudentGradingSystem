@@ -1,0 +1,23 @@
+.button{
+	-fx-background-image: url("../img/home-icon.png");
+	-fx-background-color: #2E2E2E;
+	-fx-background-size: 35px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#pdfButton{
+	-fx-background-image: url("../img/pdf.png");
+	-fx-background-color: #0051A8;
+	-fx-background-size: 55px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}
+
+#pdfButton:hover, armed{
+	-fx-background-image: url("../img/pdf.png");
+	-fx-background-color: #00348A;
+	-fx-background-size: 55px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+}

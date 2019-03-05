@@ -1,0 +1,29 @@
+.data0.chart-pie {
+	-fx-pie-color: #0074F2;
+}
+
+.data1.chart-pie {
+	-fx-pie-color: #B5433E;
+}
+
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+
+.chart-legend-item{
+    -fx-text-fill: #E5F0F7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: #E5F0F7;
+    -fx-fill: #E5F0F7;
+}
+
+.chart-pie-label {
+    -fx-fill: #E5F0F7;
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;
+} 

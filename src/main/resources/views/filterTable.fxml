@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentGradesController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/backgroundPhoto3.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" opacity="0.8" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="nameTableColumn" prefWidth="120.0" resizable="false" text="STUDENT NAME" />
+          <TableColumn fx:id="assignment1TableColumn" minWidth="0.0" prefWidth="88.0" resizable="false" text="LAB 1" />
+          <TableColumn fx:id="assignment2TableColumn" prefWidth="88.0" resizable="false" text="LAB 2" />
+            <TableColumn fx:id="assignment3TableColumn" prefWidth="88.0" resizable="false" text="LAB 3" />
+            <TableColumn fx:id="assignment4TableColumn" prefWidth="88.0" resizable="false" text="LAB 4" />
+            <TableColumn fx:id="assignment5TableColumn" prefWidth="88.0" resizable="false" text="LAB 5" />
+            <TableColumn fx:id="assignment6TableColumn" prefWidth="88.0" resizable="false" text="LAB 6" />
+            <TableColumn fx:id="assignment7TableColumn" prefWidth="88.0" resizable="false" text="LAB 7" />
+            <TableColumn fx:id="assignment8TableColumn" prefWidth="88.0" resizable="false" text="LAB 8" />
+            <TableColumn fx:id="assignment9TableColumn" prefWidth="88.0" resizable="false" text="LAB 9" />
+            <TableColumn fx:id="assignment10TableColumn" prefWidth="88.0" resizable="false" text="LAB 10" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

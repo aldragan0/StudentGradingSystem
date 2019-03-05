@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentReadController">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/backgroundPhoto3.png" />
+         </image>
+      </ImageView>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TabPane prefHeight="400.0" prefWidth="519.0" stylesheets="@../css/tablePane.css" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Grades">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="gradeTable" prefHeight="336.0" prefWidth="505.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+                                <columns>
+                                    <TableColumn fx:id="assignmentTableColumn" prefWidth="147.0" resizable="false" text="ASSIGNMENT ID" />
+                                    <TableColumn fx:id="deadlineTableColumn" prefWidth="121.0" resizable="false" text="DEADLINE" />
+                                  <TableColumn fx:id="weekGradedTableColumn" prefWidth="132.0" resizable="false" text="WEEK GRADED" />
+                                  <TableColumn fx:id="gradeTableColumn" prefWidth="90.0" resizable="false" text="GRADE" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Ungraded Assignments">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="529.0">
+                           <children>
+                              <TableView fx:id="assignmentTable" prefHeight="336.0" prefWidth="505.0" stylesheets="@../css/tableView.css" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="20.0">
+                                <columns>
+                                  <TableColumn fx:id="assignmentIdTableColumn" prefWidth="120.0" text="ASSIGNMENT ID" />
+                                  <TableColumn fx:id="descriptionTableColumn" prefWidth="170.0" text="DESCRIPTION" />
+                                    <TableColumn fx:id="assignmentDeadlineTableColumn" prefWidth="84.0" resizable="false" text="DEADLINE" />
+                                    <TableColumn fx:id="weekReceivedTableColumn" prefWidth="116.0" resizable="false" text="WEEK RECEIVED" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+    <AnchorPane layoutX="581.0" layoutY="23.0" minHeight="0.0" minWidth="0.0" prefHeight="381.0" prefWidth="179.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="160.0" layoutX="10.0" layoutY="25.0" opacity="0.8" strokeType="INSIDE" width="159.0" />
+            <GridPane layoutY="4.0" prefHeight="373.0" prefWidth="179.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="128.0" minHeight="10.0" percentHeight="15.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="128.0" minHeight="10.0" percentHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="228.0" minHeight="10.0" percentHeight="20.0" prefHeight="228.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="nameLabel" stylesheets="@../css/label.css" text="Student Name" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button mnemonicParsing="false" onAction="#handleLogOut" stylesheets="@../css/button.css" text="Log Out" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Label id="bigLabel" stylesheets="@../css/label.css" text="Welcome" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

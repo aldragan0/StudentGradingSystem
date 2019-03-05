@@ -1,0 +1,14 @@
+Assignment: 1
+Grade: 7.5
+Graded in week: 4
+Deadline: 5
+Feedback:
+Te-ai descurcat bine.
+
+Assignment: 1
+Grade: 7.5
+Graded in week: 4
+Deadline: 5
+Feedback:
+Se putea si mai bine.
+

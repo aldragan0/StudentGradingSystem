@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GradesController">
+   <top>
+      <AnchorPane id="AnchorPane" stylesheets="@../css/mainGradeView.css" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="800.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../img/header.png" />
+               </image>
+            </ImageView>
+            <MenuBar opacity="0.8" prefHeight="32.0" prefWidth="800.0" scaleShape="false">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAddGrade" text="Add" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleLogOut" text="Log Out" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleFilterGrade" text="Filters" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleReportGrade" text="Reports" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label id="extraBigLabel" alignment="CENTER" contentDisplay="RIGHT" layoutX="606.0" layoutY="-3.0" prefHeight="32.0" prefWidth="180.0" stylesheets="@../css/label.css" text="Teacher">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="417.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GradeReportController">
+   <children>
+      <ImageView fitHeight="417.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/backgroundPhoto3.png" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="chartTabPane" layoutX="70.0" layoutY="75.0" prefHeight="430.0" prefWidth="546.0" stylesheets="@../css/tablePane.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="154.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="chart1" text="Student Avg. Grade">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="378.0" layoutX="6.0" layoutY="1.0" opacity="0.8" strokeType="INSIDE" width="532.0" />
+                        <BarChart fx:id="barChartStudentAvg" animated="false" layoutX="2.0" layoutY="1.0" prefHeight="382.0" prefWidth="497.0" stylesheets="@../css/barChart.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" stylesheets="@../css/chartAxis.css" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" stylesheets="@../css/chartAxis.css" upperBound="200.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="chart2" text="Assignment Avg.">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="378.0" layoutX="6.0" layoutY="1.0" opacity="0.8" strokeType="INSIDE" width="532.0" />
+                        <LineChart fx:id="lineChartAssignmentAvg" animated="false" layoutX="-1.0" layoutY="9.0" prefHeight="374.0" prefWidth="497.0" stylesheets="@../css/lineChart.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" stylesheets="@../css/chartAxis.css" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" stylesheets="@../css/chartAxis.css" upperBound="10.0" />
+                          </yAxis>
+                        </LineChart>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="chart3" text="Students entering exam">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="378.0" layoutX="6.0" layoutY="1.0" opacity="0.8" strokeType="INSIDE" width="532.0" />
+                        <BarChart fx:id="barChartEnteringExam" animated="false" layoutX="4.0" layoutY="-3.0" prefHeight="387.0" prefWidth="497.0" stylesheets="@../css/barChart.css">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" stylesheets="@../css/chartAxis.css" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" stylesheets="@../css/chartAxis.css" upperBound="230.0" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="chart4" text="Assignments on Time">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="371.0" prefWidth="508.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e2e2e" height="378.0" layoutX="6.0" layoutY="1.0" opacity="0.8" strokeType="INSIDE" width="532.0" />
+                        <PieChart fx:id="pieChartAssignmentTime" animated="false" layoutX="9.0" layoutY="21.0" prefHeight="357.0" prefWidth="479.0" stylesheets="@../css/pieChart.css" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button id="pdfButton" layoutX="646.0" layoutY="325.0" mnemonicParsing="false" onAction="#exportPDF" prefHeight="68.0" prefWidth="67.0" stylesheets="@../css/imgButton.css" textOverrun="LEADING_ELLIPSIS" />
+   </children>
+</AnchorPane>

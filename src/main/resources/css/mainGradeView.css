@@ -1,0 +1,28 @@
+#AnchorPane{
+	-fx-background-color: #2E2E2E;
+}
+
+.menu-bar{
+	-fx-background-color: #2E2E2E;
+}
+.menu-bar > .container > .menu:openvertically > .label > .text{
+	-fx-fill: #E5F0F7;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+}
+
+.menu-bar .container .menu:hover, selected{
+	-fx-background-color: #0051A8;
+}
+
+.menu-item .label {
+    -fx-text-fill: #E5F0F7;
+}
+
+.menu-item:focused {
+     -fx-background-color: #0051A8;
+}
+
+.context-menu{
+	-fx-background-color: #2E2E2E;
+}

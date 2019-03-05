@@ -1,0 +1,16 @@
+.check-box:determinate .text{
+	-fx-font-family: System;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-padding: 0 0 0 8;
+	-fx-fill: #E5F0F7;
+}
+
+.check-box:determinate .box{
+	-fx-background-color: #262626;
+	-fx-opacity: 0.9;
+}
+
+.check-box:selected .box .mark{
+	-fx-background-color: #E5F0F7;
+}

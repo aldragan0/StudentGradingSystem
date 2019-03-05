@@ -1,0 +1,15 @@
+.text-area{
+	-fx-background-color: #262626;
+	-fx-text-fill: #E5F0F7;
+	-fx-font-size: 13px;
+	-fx-wrap-text: true;
+	-fx-opacity: 0.9;
+}
+
+.text-area:focused{
+	-fx-border-color: #0074F2;
+}
+
+.text-area .scroll-pane:fitToWidth:fitToHeight .viewport .content{
+	-fx-background-color: #262626;
+}

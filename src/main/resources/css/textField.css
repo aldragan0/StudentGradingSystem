@@ -1,0 +1,11 @@
+.text-field{
+	-fx-opacity: 0.9;
+	-fx-text-fill: #E5F0F7;
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+	-fx-background-color: #262626;
+}
+
+.text-field:focused{
+	-fx-border-color: #0074F2;
+}

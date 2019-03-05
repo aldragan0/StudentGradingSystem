@@ -1,0 +1,7 @@
+.axis{
+	-fx-font-size: 1.4em;
+	-fx-font-weight: bold;
+	-fx-tick-label-fill: #E5F0F7;
+	-fx-tick-length: 15;
+    -fx-minor-tick-length: 5;
+}

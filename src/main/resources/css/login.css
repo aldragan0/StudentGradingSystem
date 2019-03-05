@@ -1,0 +1,27 @@
+.label{
+	-fx-font-family: System;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-padding: 0 0 0 8;
+	-fx-text-fill: #E5F0F7;
+}
+
+.text-field{
+	-fx-opacity: 0.9;
+	-fx-text-fill: #E5F0F7;
+	-fx-background-color: #262626;
+}
+
+.text-field:focused{
+	-fx-border-color: #0074F2;
+}
+
+.button{
+	-fx-background-color: #0051A8;
+	-fx-text-fill: #E5F0F7;
+	-fx-font-weight: bold;
+}
+
+.button: hover, armed, selected{
+	-fx-background-color: #00348A;
+}

@@ -1,0 +1,18 @@
+.bar-chart:vertical .chart-content .chart-plot-background{
+	-fx-background-color: transparent;
+}
+
+.chart-bar{
+	-fx-bar-fill: #0074F2;
+}
+
+.chart-legend {
+   -fx-background-color:  transparent;
+   -fx-padding: 20px;
+}
+
+.chart-legend-item{
+    -fx-text-fill: #E5F0F7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}

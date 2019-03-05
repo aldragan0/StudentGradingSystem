@@ -1,0 +1,59 @@
+.button{
+	-fx-background-color: #00348A;
+	-fx-text-fill: #E5F0F7;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+	-fx-min-width: 60;
+	-fx-min-height: 22;
+}
+
+.button: hover, selected{
+	-fx-background-color: #0051A8;
+	-fx-min-width: 60;
+	-fx-min-height: 22;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+}
+
+.button: armed{
+	-fx-background-color: #00348A;
+	-fx-min-width: 60;
+	-fx-min-height: 22;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+}
+
+.button: disabled{
+	-fx-background-color: #0074F2;
+	-fx-min-width: 60;
+	-fx-min-height: 22;
+	-fx-font-weight: bold;
+	-fx-font-size: 12px;
+}
+
+#RemoveBtn{
+	-fx-background-image: url("../img/delete.png");
+	-fx-background-size: 16px;
+	-fx-background-repeat: no-repeat;
+	-fx-background-position: center;
+
+	-fx-opacity: 0;
+	-fx-min-width: 40;
+	-fx-min-height: 22;
+}
+
+#RemoveBtn: hover, selected{
+	-fx-background-color: #8F1D2C;
+
+	-fx-opacity: 1;
+	-fx-min-width: 40;
+	-fx-min-height: 22;
+}
+
+#RemoveBtn: armed{
+	-fx-background-color: #6E1622;
+
+	-fx-opacity: 1;
+	-fx-min-width: 40;
+	-fx-min-height: 22;
+}
