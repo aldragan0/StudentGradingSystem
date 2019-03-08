@@ -36,13 +36,7 @@ public class InMemoryRepo<ID extends Comparable<ID>, E extends HasID<ID>> implem
 
         if(!hasNextPage()) return null;
 
-        List<E> pageItems = new ArrayList<>();
-        List<E> entities = new ArrayList<>(items.values());
-        entities.sort(Comparator.comparing(HasID::getID));
-
-        for(;firstElem < lastElem; ++firstElem){
-            pageItems.add(entities.get(firstElem));
-        }
+        List<E> pageItems = getPageItems(firstElem, lastElem);
         currentPage = Math.min(items.size() + 1 / entitiesPerPage, currentPage + 1);
         return pageItems;
     }
@@ -58,6 +52,19 @@ public class InMemoryRepo<ID extends Comparable<ID>, E extends HasID<ID>> implem
 
         if(!hasPrevPage()) return null;
 
+        List<E> pageItems = getPageItems(firstElem, lastElem);
+        currentPage = Math.max(0, currentPage - 1);
+        return pageItems;
+    }
+
+    /**
+     * returns all the items between a start and end index
+     * @param firstElem index of the first element in the page
+     * @param lastElem index of the last element in the page
+     * @return items inside the [first, last] index interval
+     */
+    private List<E> getPageItems(int firstElem, int lastElem){
+
         List<E> pageItems = new ArrayList<>();
         List<E> entities = new ArrayList<>(items.values());
         entities.sort(Comparator.comparing(HasID::getID));
@@ -65,7 +72,6 @@ public class InMemoryRepo<ID extends Comparable<ID>, E extends HasID<ID>> implem
         for(;firstElem < lastElem; ++firstElem){
             pageItems.add(entities.get(firstElem));
         }
-        currentPage = Math.max(0, currentPage - 1);
         return pageItems;
     }
 
